@@ -1,0 +1,41 @@
+line 0 - The next line is line 1 (f1)
+ BA   AB  AC      BD   EB     FA   G1    X2     Y5A 	A2	A1	B2
+ 5   50   200     61   43     43   35     47    105 	3	1	25
+line 3 - The next line is line 4 (f2)
+ BA   AB  AC      BD   EB     FA   G1    X2     Y5A 	A2	A1	B2
+ 5   10   200     61   43     43   35     47    105 	3	20	25
+line 6 - The next line is line 7 (f3)
+ BA   AB  AC      BD   EB     FA   G1    X2     Y5A 	A2	A1	B2
+ 5   10   200     61   43     43   35     47    105 	3	6	25
+line 9 - The next line is line 10 (f4)
+ BA   AB  AC      BD   EB     FA   G1    X2     Y5A 	A2	A1	B2
+ 5   10   200     61   43     43   35     47    105 	3	18	12
+line 12 - The next line is line 13 (f5)
+9
+0  0  0  0  1  1  1  0  1
+0  0  0  0  0  0  1  0  0
+0  0  0  0  0  0  0  1  0
+0  0  0  0  0  0  0  1  0
+1  0  0  0  0  1  0  0  1
+1  0  0  0  1  0  0  0  1
+1  1  0  0  0  0  0  0  0
+0  0  1  1  0  0  0  0  0
+1  0  0  0  1  1  0  0  0
+line 23 - The next line is line 24 (f6)
+6
+   0    7    9   999   999    14  
+   7    0   10    15   999   999  
+   9   10    0    11   999     2  
+999   15   11    0     6     999  
+999  999 999   6     0       9  
+  14  999   2   999   9       0 
+line 31 - The next line is line 32 (f7)
+7
+0  1  0  0  0  1  0
+1  0  1  1  1  0  0
+0  1  0  1  0  0  0
+0  1  1  0  2  0  0
+0  1  0  2  0  0  1
+1  0  0  0  0  0  1
+0  0  0  0  1  1  0
+END

@@ -1,0 +1,22 @@
+ECHO is on.
+
+ Nguyen Phuc Tien _ HE141057 _ SE1723
+ 1. Test f1 (1 mark)
+ 2. Test f2 (1 mark)
+ 3. Test f3 (1 mark)
+ 4. Test f4 (1 mark)
+    Your selection (1 -> 4): ECHO is on.
+
+ Nguyen Phuc Tien _ HE141057 _ SE1723
+ 1. Test f1 (1 mark)
+ 2. Test f2 (1 mark)
+ 3. Test f3 (1 mark)
+ 4. Test f4 (1 mark)
+    Your selection (1 -> 4): ECHO is on.
+
+ Nguyen Phuc Tien _ HE141057 _ SE1723
+ 1. Test f1 (1 mark)
+ 2. Test f2 (1 mark)
+ 3. Test f3 (1 mark)
+ 4. Test f4 (1 mark)
+    Your selection (1 -> 4): 

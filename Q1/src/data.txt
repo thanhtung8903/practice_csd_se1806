@@ -1,0 +1,58 @@
+Line 1 -   (f1)
+ AA    AB   	AC   	 AD   AE    	AF     AG	AB	AC	AH
+ 9    3    	7   	 2    6    	4  	 105	5	4	10
+Line 4 -   (f21)
+ AA    AB   	AC   	 AD   AE    	AF     AG	AB	AC	AH
+ 9    13    	7   	 12    6    	4  	 105	5	4	16
+Line 7 (f22)
+ AA    AB   	AC   	 AD   AE    	AF     AG	AB	AC	AH
+ 9    13    	7   	 12    6    	4  	 105	5	4	1
+Line 10 - (f31)
+AA    AB   	AC   	 AD   AE    	AF     AG	AC	AE
+ 9    13    	7   	 12    6    	4  	 105	2	19
+Line 13 - (f32)
+AA    AB   	AC   	 AD   AE    	AF     AG	AC	AE
+ 9    1     	7   	 1     6    	4  	 105	2	19
+Line 16 (f41)
+AA    AB   	BC   	 AD   EE    	AF     AG	AC	AE
+ 9    13    	8   	 12    6    	4  	 105	20	19
+Line 19(f42)
+AA    AB   	BC   	 AD   EE    	AF     AG	AC	AE
+ 9    1    	8   	2    6    	4  	 105	2	9
+Line 22 (f43)
+AA    AB   	BC   	 AD   EE    	AF     AG	AC	AE
+ 9    3    	8   	 1     6    	4  	 105	2 	19
+Line 25 (f51)
+AA    AB   	BC   	 AD   EE    	AF     AG	AC	AE
+ 9    3    	8   	 1     6    	4  	 105	2 	19
+Line 28 (f52)
+AA    AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 9    3    	18   	 1     16    	4  	 105	22 	19
+Line 31 (f53)
+AC   AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 19    3    	 18   	 1     1     	4  	 105	 2 	19
+Line 34 (f61)
+AC   AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 9    3    	 8   	 1     11     	4  	 105	 2 	19
+Line 37 (f62)
+AC   AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 9    3    	 18   	 1     11     	4  	 105	 2 	19
+Line 40 (f71)
+AC   AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 9    3    	 18   	 1     11     	4  	 105	 2  	19
+Line 43 (f72)
+AC   AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 9    3    	 18   	 1     11     	4  	 105	 20 	19
+Line 46 (f81)
+AC   AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 9    3    	 18   	 1     11     	4  	 105	 2  	19
+Line 49 (f82)
+AC   AB   	BC   	 AD   EC    	AF     AG	AC	AE
+ 9    3    	  8   	 1     1     	4  	 105	 20 	 9
+Line 52 (f9)
+AC   AB   	BC   AA	   AH	 AD   EC    	AF     AG	AC	AE
+ 9    3    	  8   3  1	 18     1     	4  	 105	 2 	 9
+Line 55 (f10)
+AC   AB   	BC   AA	   AH	 AD   EC    	AF     AG	AC	AE
+ 9    3    	  8   3  1	 18     1     	4  	 105	 2 	 9
+END
