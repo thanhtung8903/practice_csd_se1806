@@ -331,7 +331,9 @@ class MyList {
                 break;
             }
         }
-        remove(q);
+        if (q != null) {
+            remove(q);
+        }
         ftraverse(f);
         f.close();
     }
@@ -355,9 +357,11 @@ class MyList {
         ArrayList<Node> count = new ArrayList<>();
         ftraverse(count);
         Node q = null;
-        for (Node temp: count) {
-            if (temp.next.info.price > 10) {
-                q = temp;
+        for (Node temp : count) {
+            if (temp.next != null) {
+                if (temp.next.info.price > 10) {
+                    q = temp;
+                }
             }
         }
         remove(q);
@@ -384,7 +388,7 @@ class MyList {
         ArrayList<Node> count = new ArrayList<>();
         ftraverse(count);
         Node max = head;
-        for (Node temp : count ) {
+        for (Node temp : count) {
             if (temp.info.price >= max.info.price) {
                 max = temp;
             }
@@ -408,7 +412,7 @@ class MyList {
                 }
             }
         }
-        
+
         ftraverse(f);
         f.close();
     }
@@ -432,7 +436,7 @@ class MyList {
         ArrayList<Node> count = new ArrayList<>();
         ftraverse(count);
         Node min = head;
-        for (Node temp : count ) {
+        for (Node temp : count) {
             if (temp.info.price < min.info.price) {
                 min = temp;
             }
@@ -457,7 +461,7 @@ class MyList {
                 }
             }
         }
-        
+
         ftraverse(f);
         f.close();
     }
