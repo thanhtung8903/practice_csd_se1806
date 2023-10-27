@@ -38,7 +38,7 @@ class MyList {
 
     void ftraverse(ArrayList<Node> count) {
         Node p = head;
-        while (p != tail) {
+        while (p != null) {
             count.add(p);
             p = p.next;
         }
