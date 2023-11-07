@@ -342,7 +342,7 @@ public class Graph {
                 if (visited[i] == true) {
                     continue;
                 }
-                if (distance[i] > distance[k] + a[k][i]) {
+                if (distance[i] >= distance[k] + a[k][i]) {
                     distance[i] = distance[k] + a[k][i];
                     previous[i] = k;
                 }
@@ -355,15 +355,10 @@ public class Graph {
             points.add(points.size(), to);
         }
         for (int i = points.size() - 1; i >= 0; i--) {
-//            System.out.print(v[points.get(i)] + " ");
-//            f.writeBytes(v[points.get(i)] + " ");
             ver.add(v[points.get(i)]);
         }
-//        System.out.println("");
-//        f.writeBytes("\n");
+
         for (int i = points.size() - 1; i >= 0; i--) {
-//            System.out.print(distance[points.get(i)] + " ");
-//            f.writeBytes(distance[points.get(i)] + " ");
             dis.add(distance[points.get(i)]);
         }
     }
@@ -545,16 +540,13 @@ while(S is not empty)
         ArrayList<Character> v2 = new ArrayList<>();
         ArrayList<Integer> dis2 = new ArrayList<>();
         dijkstra(1, 6, v2, dis2);
-
-//        for (int i = 0; i <= 3; i++) {
-//            f.writeBytes(v2.get(i) + " ");
-////            f.writeBytes(v2.get(i) + "-" + dis2.get(i) + " ");
-//        }
+        
         for (Character temp : v2) {
-            System.out.println(temp + " ");
+            System.out.print(temp);
         }
-        for (int temp : dis2) {
-            System.out.println(temp + " ");
+        
+        for (int i = v2.size() - 4; i < v2.size(); i++) {
+            f.writeBytes(v2.get(i) + "-" + dis2.get(i) + " ");
         }
         f.writeBytes("\r\n");
         f.close();
@@ -577,11 +569,93 @@ while(S is not empty)
         f.close();
     }
 
+    void dijkstra2(int fro, int to, ArrayList<Character> ver, ArrayList<Integer> dis) throws Exception {
+        int i, j, k, t, INF;
+        INF = 999;
+        boolean[] S = new boolean[n];
+        int[] d = new int[n];
+        int[] p = new int[n];
+        for (i = 0; i < n; i++) {
+            S[i] = false;
+            d[i] = a[fro][i];
+            p[i] = fro;
+        }
+
+        int[] ss = new int[n]; // ss[0], ss[1], ss[2],... are vertices sequentially selected to S
+        int[] pp = new int[n]; // ss[0] -> ss[1] -> ss[2],... is the shortest path
+        int m, r; // m is number of vertices in S,
+        // r is the number of vertices in shortest path 
+        j = 0;
+
+        // select fro into the set S
+        S[fro] = true;
+        ss[0] = fro;
+        while (true) {// find min d[i] in the set of those vertices not selected into S
+            k = -1;
+            t = INF;
+            for (i = 0; i < n; i++) {
+                if (S[i] == true) {
+                    continue;
+                }
+                if (d[i] < t) {
+                    k = i;
+                    t = d[i];
+                }
+            }
+            if (k == -1) {
+                return; // no solution
+            }           // select k into the set S
+            S[k] = true;
+            j++;
+            ss[j] = k;
+            if (k == to) {
+                break;
+            }
+            // Recalculate d[i]
+            for (i = 0; i < n; i++) {
+                if (S[i] == true) {
+                    continue;
+                }
+                if (d[i] > d[k] + a[k][i]) {
+                    d[i] = d[k] + a[k][i];
+                    p[i] = k;
+                }
+            }
+        }
+        m = j;
+        Stack s = new Stack();
+        i = to;
+        while (true) {
+            s.push(i);
+            if (i == fro) {
+                break;
+            }
+            i = p[i];
+        }
+        j = 0;
+        while (!s.isEmpty()) {
+            i = s.pop();
+            pp[j++] = i;
+        }
+        r = j;
+        ver.add(v[pp[0]]);
+//        f.writeBytes("" + v[pp[0]]);
+        for (i = 1; i < r; i++) {
+//            f.writeBytes("   " + v[pp[i]]);
+            ver.add(v[pp[i]]);
+
+        }
+//        f.writeBytes("\r\n");
+//        f.writeBytes("" + d[pp[0]]);
+         dis.add(d[pp[0]]);
+        for (i = 1; i < r; i++) {
+//            f.writeBytes("   " + d[pp[i]]);
+            dis.add(d[pp[i]]);
+        }
+//        f.writeBytes("\r\n");
+    }
+
     void eulerCycle(int k, RandomAccessFile f) throws Exception {
-//        if (!hasEulerCycle()) {
-//            System.out.println("Condicitons for Euler's cycle are not satisfied");
-//            return;
-//        }
         int[] eu = new int[100];
         int m = 0;
         int i, j, r;
@@ -603,11 +677,8 @@ while(S is not empty)
                 a[i][r]--;
             }
         }
-//        System.out.println("Euler's cycle is:");
-//        System.out.print(v[eu[0]]);
         f.writeBytes(v[eu[0]] + "");
         for (i = 1; i < m; i++) {
-//            System.out.print(" " + v[eu[i]]);
             f.writeBytes(" " + v[eu[i]]);
         }
         System.out.println();

@@ -1,2 +1,4 @@
 
-E D C B D E G F A B E
+B C E 
+5
+E-5 D-9 F-14 G-19 
